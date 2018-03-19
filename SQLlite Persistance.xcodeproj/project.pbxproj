@@ -14,6 +14,7 @@
 		A7FAFEF02059AE9200498AA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FAFEEE2059AE9200498AA8 /* LaunchScreen.storyboard */; };
 		A7FAFEFB2059AE9200498AA8 /* SQLlite_PersistanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FAFEFA2059AE9200498AA8 /* SQLlite_PersistanceTests.swift */; };
 		A7FAFF062059AE9300498AA8 /* SQLlite_PersistanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FAFF052059AE9300498AA8 /* SQLlite_PersistanceUITests.swift */; };
+		A7FAFF152059B43000498AA8 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FAFF142059B43000498AA8 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		A7FAFF012059AE9300498AA8 /* SQLlite PersistanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SQLlite PersistanceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7FAFF052059AE9300498AA8 /* SQLlite_PersistanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLlite_PersistanceUITests.swift; sourceTree = "<group>"; };
 		A7FAFF072059AE9300498AA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7FAFF142059B43000498AA8 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A7FAFF162059BAA800498AA8 /* SQLlite Persistance-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SQLlite Persistance-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7FAFF152059B43000498AA8 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +85,8 @@
 				A7FAFEF92059AE9200498AA8 /* SQLlite PersistanceTests */,
 				A7FAFF042059AE9300498AA8 /* SQLlite PersistanceUITests */,
 				A7FAFEE32059AE9200498AA8 /* Products */,
+				A7FAFF132059B43000498AA8 /* Frameworks */,
+				A7FAFF162059BAA800498AA8 /* SQLlite Persistance-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +129,14 @@
 				A7FAFF072059AE9300498AA8 /* Info.plist */,
 			);
 			path = "SQLlite PersistanceUITests";
+			sourceTree = "<group>";
+		};
+		A7FAFF132059B43000498AA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7FAFF142059B43000498AA8 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +207,7 @@
 				TargetAttributes = {
 					A7FAFEE12059AE9200498AA8 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					A7FAFEF52059AE9200498AA8 = {
@@ -426,11 +441,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "SQLlite Persistance/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.BKG.SQLlite-Persistance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SQLlite Persistance-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -440,11 +458,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "SQLlite Persistance/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.BKG.SQLlite-Persistance";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SQLlite Persistance-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
